@@ -1,0 +1,69 @@
+/**
+ * @author Ahmadreza Shamimi
+ * @email shentiaspirit@hotmail.com
+ * @create date 2021-10-03 18:38:58
+ * @modify date 2021-10-03 19:52:20
+ * @desc [description]
+ */
+@import url("https://fonts.googleapis.com/css2?family=Muli&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+body {
+  font-family: "Muli", sans-serif;
+  margin: 0;
+  display: flex;
+  height: 100vh;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.container {
+  display: flex;
+  width: 90vw;
+}
+
+.panel {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 80vh;
+  border-radius: 10px;
+  color: #ffffff;
+  cursor: pointer;
+  flex: 0.5;
+  margin: 10px;
+  position: relative;
+  transition: flex 0.7s ease-out;
+}
+
+.panel h3 {
+  font-size: 20px;
+  position: absolute;
+  bottom: 50px;
+  left: 100px;
+  text-align: center;
+  margin: 0;
+  opacity: 0;
+  transition: opacity 0.3s ease-in 0.4s;
+}
+
+.panel.active {
+  flex: 5;
+}
+
+.panel.active h3 {
+  opacity: 1;
+}
+
+@media (max-width: 480px) {
+  .container {
+    width: 100vw;
+  }
+  .panel:nth-last-of-type(4),
+  :nth-last-of-type(5) {
+    display: none;
+  }
+}
